@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu-24.04
 
-RUN apt-get update && apt-get -y install m4 build-essential autoconf opam
+RUN apt-get update && apt-get -y install m4 build-essential autoconf opam libunwind-dev pkg-config
 
 RUN opam init -a --disable-sandboxing --yes --bare && \
         opam update -a && \
